@@ -14,7 +14,8 @@
                         <li><a href="javascript:void()">Mi Balance</a></li>
                         <li><a href="javascript:void()">Bandeja de entrada</a></li>
                         <li><a href="javascript:void()">Configuración de cuenta</a></li>
-                        <li><a href="javascript:void()">Cerrar sesión</a></li>
+                        <li><a routerLinkActive="active" routerLink="/account-settings">Configuración visualización</a></li>
+                        <li><a routerLink="/login">Cerrar sesión</a></li>
                     </ul>
                 </li>
                 <li class="nav-devider"></li>
@@ -33,6 +34,19 @@
                     </ul>
                 </li>
 
+                <li *ngFor="let menu of _sidebar.menu">
+                    <a class="has-arrow waves-effect waves-dark" href="#" aria-expanded="false">
+                        <i class="{{menu.icono}}"></i>
+                        <span class="hide-menu"> {{menu.titulo}} <span class="label label-rouded label-themecolor pull-right">{{menu.submenu.length}}</span></span>
+                    </a>
+                    <ul aria-expanded="false" class="collapse">
+                        <li *ngFor="let submenu of menu.submenu">
+                            <a routerLinkActive="active" [routerLink]="[submenu.url]">{{submenu.titulo}} </a>
+                        </li>
+
+                    </ul>
+
+                </li>
 
 
             </ul>

@@ -27,8 +27,8 @@ export class Graficas1Component implements OnInit {
       'leyenda': '¿Le dan gases los frijoles?'
     },
     'grafico4': {
-      'labels': ['No', 'Si'],
-      'data':  [85, 15],
+      'labels': ['No', 'Si', 'N/R'],
+      'data':  [85, 15, 500],
       'type': 'doughnut',
       'leyenda': '¿Le importa que le den gases?'
     },
@@ -38,8 +38,7 @@ export class Graficas1Component implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    //console.log(this.graficos);
-    //console.log(this.graficos.grafico3.leyenda);
+
   }
 
 }

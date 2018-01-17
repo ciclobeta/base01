@@ -1,0 +1,10 @@
+PASOS:
+
+git status
+git add .
+git status
+git commit -am "mas funciones"
+git push origin master
+git tag -a v1.0.1 -m "Cascaron basico mejorada"
+git tag
+git push --tags
