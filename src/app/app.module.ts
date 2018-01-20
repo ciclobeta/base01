@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgForm, FormsModule } from '@angular/forms';
 
 
 // Rutas
@@ -29,9 +30,12 @@ import { RegisterComponent } from './login/register.component';
     APP_ROUTES,
     PagesModule,
     ServiceModule,
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    NgForm
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

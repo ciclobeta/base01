@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
+
 declare function init_plugins();
 
 @Component({
@@ -13,12 +15,12 @@ export class LoginComponent implements OnInit {
   constructor ( public router: Router) { }
 
   ngOnInit() {
-    console.log('Iniciando.....');
+    //console.log('Iniciando.....');
     init_plugins();
   }
 
   ingresar() {
-    console.log('Ingresando.....');
+    //console.log('Ingresando.....');
     this.router.navigate(['/progress']);
   }
 }
